@@ -1,11 +1,13 @@
 let express = require('express')
-let parse = require('body-parser')
+let parser = require('body-parser')
 let router = require('./apiRouter').router
 let app = express()
 
-app.use(parse.urlencoded({ extended: true }));
-app.use(parse.json());
+//middleware avec express
+app.use(parser.urlencoded({ extended: true }));
+app.use(parser.json()); 
 
+//middleware personnel
 app.use('/api/', router);
 
 //pour le premier route

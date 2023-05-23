@@ -9,4 +9,4 @@ exports.router = (() => {
     apiRouter.route('/users/login/').post(userCtl.login);
 
     return apiRouter;
-})(); //on a créé l'instance de la fonction / appel auto
+})(); //on a créé l'instance auto de l'objet
